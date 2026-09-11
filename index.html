@@ -9,12 +9,13 @@
 <!-- End Google Tag Manager -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>O maior pesqueiro do Brasil vai voltar ao mar com comando eletrônico feito em Santa Catarina | Marine Telematics</title>
-<meta name="description" content="A Marine Telematics, de Florianópolis, converte comandos mecânicos em eletrônicos sem arrancar os cabos do barco e embarca telemetria que funciona por 4G ou satélite. Informe publicitário.">
+<title>O maior pesqueiro do Brasil vai voltar ao mar com comando eletrônico feito em Santa Catarina | Mercado Náutico</title>
+<meta name="description" content="A Marine Telematics, de Florianópolis, converte comandos mecânicos em eletrônicos sem arrancar os cabos do barco e embarca telemetria que funciona por 4G ou satélite. Conteúdo patrocinado.">
 <meta name="theme-color" content="#01293F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2301293F'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='white'%3EM%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Marine Telematics">
+<meta property="og:site_name" content="Mercado Náutico">
 <meta property="og:title" content="O maior pesqueiro do Brasil vai voltar ao mar com comando eletrônico feito em Santa Catarina">
 <meta property="og:description" content="Do cais de Itajaí aos rios da Amazônia: como a conversão para o comando eletrônico, com telemetria, está chegando aos barcos de pesca e de trabalho.">
 <meta property="og:image" content="https://marinetelematics.studioartemis.co/img/og-image.jpg">
@@ -39,7 +40,7 @@
   "image": ["https://marinetelematics.studioartemis.co/img/og-image.jpg"],
   "url": "https://marinetelematics.studioartemis.co/",
   "author": {"@type": "Organization", "name": "Marine Telematics", "url": "https://marinetelematics.com.br/"},
-  "publisher": {"@type": "Organization", "name": "Marine Telematics", "url": "https://marinetelematics.com.br/"}
+  "publisher": {"@type": "Organization", "name": "Mercado Náutico"}
 }
 </script>
 <style>
@@ -75,23 +76,13 @@
   .progresso{position:fixed;inset:0 0 auto 0;height:3px;z-index:60;pointer-events:none}
   .progresso span{display:block;height:100%;width:100%;background:var(--cyan);transform-origin:0 50%;transform:scaleX(0)}
 
-  /* faixa de identificação publicitária */
-  .faixa{background:var(--navy);color:#DCE6EC;font:600 .6875rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase}
-  .faixa .in{max-width:1180px;margin:0 auto;padding:10px var(--gutter);display:flex;justify-content:space-between;gap:16px;align-items:center}
-  .faixa b{color:#fff;font-weight:700}
-  .faixa .data{letter-spacing:.04em;text-transform:none;font-weight:500;color:#AFC3CF}
-
-  /* cabeçalho */
-  .mast{border-bottom:1px solid var(--rule);background:var(--paper)}
-  .mast .in{max-width:1180px;margin:0 auto;padding:16px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .marca{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--navy)}
-  .marca img{height:19px;width:auto}
-  .marca .sep{width:1px;height:22px;background:var(--rule)}
-  .marca .editoria{font:italic 500 1.25rem/1 var(--serif);color:var(--navy);letter-spacing:-.01em}
-  .btn-topo{font:600 .8125rem/1 var(--sans);color:var(--navy);text-decoration:none;border:1.5px solid var(--navy);padding:10px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
-  .btn-topo:hover{background:var(--navy);color:#fff}
-  .trilha{max-width:1180px;margin:0 auto;padding:12px var(--gutter) 0;font:500 .75rem/1.4 var(--sans);color:var(--ink-3);letter-spacing:.02em}
-  .trilha span+span::before{content:"›";margin:0 8px;color:var(--rule)}
+  /* cabeçalho de jornal */
+  .jornal-faixa{background:var(--navy);color:#fff}
+  .jornal-faixa .in{max-width:1180px;margin:0 auto;padding:18px var(--gutter) 15px;display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center}
+  .nome{font-family:var(--serif);font-weight:700;font-size:clamp(1.85rem,1.3rem + 2.2vw,2.75rem);line-height:1;letter-spacing:-.022em;color:#fff}
+  .lema{font:600 .625rem/1.2 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#9FB6C4}
+  .jornal-data{border-bottom:3px double var(--rule)}
+  .jornal-data .in{max-width:1180px;margin:0 auto;padding:10px var(--gutter);text-align:center;font:500 .75rem/1.4 var(--sans);color:var(--ink-3);letter-spacing:.03em}
 
   /* abertura */
   .abertura{max-width:1180px;margin:0 auto;padding:22px var(--gutter) 8px;display:grid;gap:28px}
@@ -245,7 +236,7 @@
   /* rodapé */
   .rodape-site{background:var(--navy);color:#AFC3CF}
   .rodape-site .in{max-width:1180px;margin:0 auto;padding:34px var(--gutter) 90px;display:grid;gap:18px;font:400 .8125rem/1.6 var(--sans)}
-  .rodape-site img{height:18px;width:auto}
+  .rodape-site .nome-rodape{font-size:1.6rem}
   .rodape-site p{margin:0}
   .rodape-site a{color:#fff}
   .rodape-site .aviso{border-top:1px solid rgba(255,255,255,.14);padding-top:16px;font-size:.75rem;color:#8FA7B6}
@@ -301,10 +292,6 @@
     .texto .fig-esq{margin-left:-130px;width:50%}
     .texto .cx-dir{margin-right:-130px;width:46%}
   }
-  @media (max-width:420px){
-    .faixa .data{display:none}
-    .btn-topo{display:none}
-  }
 </style>
 </head>
 <body>
@@ -314,35 +301,28 @@
 
 <div class="progresso" aria-hidden="true"><span></span></div>
 
-<div class="faixa">
-  <div class="in">
-    <span><b>Informe publicitário</b> · Conteúdo produzido por Marine Telematics</span>
-    <span class="data">Sexta-feira, 11 de setembro de 2026</span>
+<header class="jornal">
+  <div class="jornal-faixa">
+    <div class="in">
+      <span class="nome">Mercado Náutico</span>
+      <span class="lema">Negócios, pesca e tecnologia no mar</span>
+    </div>
   </div>
-</div>
-
-<header class="mast">
-  <div class="in">
-    <a class="marca" href="https://marinetelematics.com.br/" aria-label="Marine Telematics — site oficial">
-      <img src="img/marine-logo-navy.svg" alt="Marine Telematics" width="228" height="19">
-      <span class="sep" aria-hidden="true"></span>
-      <span class="editoria">Notícias</span>
-    </a>
-    <a class="btn-topo" href="#servico">Fale com um especialista</a>
+  <div class="jornal-data">
+    <div class="in"><time datetime="2026-09-11">Sexta-feira, 11 de setembro de 2026</time></div>
   </div>
 </header>
-<nav class="trilha" aria-label="Seção"><span>Náutica</span><span>Pesca e trabalho</span></nav>
 
 <main>
 <article>
   <header class="abertura" id="topo">
     <div class="cabeca">
-      <div class="chapeu anima d1"><span class="ed">Pesca e trabalho</span><span class="selo">Informe publicitário</span></div>
+      <div class="chapeu anima d1"><span class="ed">Pesca e trabalho</span><span class="selo">Conteúdo patrocinado · Marine Telematics</span></div>
       <h1 class="anima d2">O maior pesqueiro do Brasil vai voltar ao mar com comando eletrônico feito em Santa Catarina</h1>
       <p class="linha-fina anima d3">A Marine Telematics, de Florianópolis, converte comandos mecânicos em eletrônicos sem arrancar os cabos do barco e embarca telemetria que funciona por 4G ou satélite. A procura vai do polo pesqueiro de Itajaí aos rios da Amazônia.</p>
       <div class="assina anima d4">
         <div>
-          <span>Por <strong>Marine Telematics</strong> · Florianópolis (SC)</span>
+          <span>Da <strong>Redação</strong> · Florianópolis (SC)</span>
           <span class="quando"><time datetime="2026-09-11">11 set. 2026</time> · 7 min de leitura</span>
         </div>
         <div class="partilha">
@@ -685,9 +665,9 @@
 
 <footer class="rodape-site">
   <div class="in">
-    <img src="img/marine-logo-white.svg" alt="Marine Telematics" width="216" height="18">
-    <p>Comandos eletrônicos e telemetria embarcada, com engenharia e fabricação em Florianópolis (SC). <a href="https://marinetelematics.com.br/" target="_blank" rel="noopener">marinetelematics.com.br</a> · <a href="https://www.instagram.com/marinetelematics/" target="_blank" rel="noopener">@marinetelematics</a></p>
-    <p class="aviso">Informe publicitário produzido por Marine Telematics Ltda. · CNPJ 42.383.271/0001-13. As fotos são quadros de vídeos publicados pela empresa e por sua equipe no Instagram.</p>
+    <span class="nome nome-rodape">Mercado Náutico</span>
+    <p>Negócios, pesca e tecnologia no mar.</p>
+    <p class="aviso">Mercado Náutico é um espaço editorial mantido pela Marine Telematics Ltda. (CNPJ 42.383.271/0001-13), de Florianópolis (SC). Esta matéria é conteúdo patrocinado. As fotos são quadros de vídeos publicados pela empresa e por sua equipe no Instagram.</p>
   </div>
 </footer>
 
