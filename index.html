@@ -197,9 +197,10 @@
   .form .sub{font:400 .875rem/1.5 var(--sans);color:var(--ink-2);margin:0 0 18px}
   .campo{margin:0 0 16px;border:0;padding:0;min-width:0}
   .campo>label,.campo legend{display:block;font:700 .8125rem/1.3 var(--sans);color:var(--ink);margin:0 0 7px;padding:0}
-  .campo input[type=text],.campo select{width:100%;font:400 1rem/1.3 var(--sans);color:var(--ink);background:#fff;border:1.5px solid #CFCAC0;border-radius:4px;padding:12px 12px;appearance:none;-webkit-appearance:none}
+  .isca{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .campo input[type=text],.campo input[type=tel],.campo select{width:100%;font:400 1rem/1.3 var(--sans);color:var(--ink);background:#fff;border:1.5px solid #CFCAC0;border-radius:4px;padding:12px 12px;appearance:none;-webkit-appearance:none}
   .campo select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2301293F' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-  .campo input[type=text]:focus,.campo select:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(61,193,248,.35)}
+  .campo input[type=text]:focus,.campo input[type=tel]:focus,.campo select:focus{border-color:var(--navy);outline:none;box-shadow:0 0 0 3px rgba(61,193,248,.35)}
   .opcoes{display:flex;flex-wrap:wrap;gap:8px}
   .opcoes label{position:relative;cursor:pointer}
   .opcoes input{position:absolute;opacity:0;width:1px;height:1px}
@@ -209,7 +210,7 @@
   .opcoes input:focus-visible+span{outline:3px solid var(--cyan);outline-offset:2px}
   .erro-msg{display:none;font:600 .75rem/1.3 var(--sans);color:var(--erro);margin-top:6px}
   .campo.invalido .erro-msg{display:block}
-  .campo.invalido input[type=text],.campo.invalido select{border-color:var(--erro)}
+  .campo.invalido input[type=text],.campo.invalido input[type=tel],.campo.invalido select{border-color:var(--erro)}
   .campo.invalido .opcoes span{border-color:#E4A9A4}
   .enviar{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;font:700 1rem/1 var(--sans);color:#fff;background:var(--navy);border:0;border-radius:4px;padding:17px 18px;cursor:pointer;transition:background .2s,transform .1s}
   .enviar:hover{background:var(--navy-2)}
@@ -572,12 +573,23 @@
 
     <form class="form" id="form-lead" novalidate>
       <h3>Fale com um especialista</h3>
-      <p class="sub">Responda seis perguntas rápidas e continue a conversa no WhatsApp, já com os dados do seu barco.</p>
+      <p class="sub">Responda sete perguntas rápidas e continue a conversa no WhatsApp, já com os dados do seu barco.</p>
 
       <div class="campo" data-campo="nome">
         <label for="f-nome">Seu nome</label>
         <input type="text" id="f-nome" name="nome" autocomplete="name" maxlength="80">
         <span class="erro-msg" role="alert">Informe seu nome.</span>
+      </div>
+
+      <div class="campo" data-campo="whatsapp">
+        <label for="f-whatsapp">WhatsApp com DDD</label>
+        <input type="tel" id="f-whatsapp" name="whatsapp" autocomplete="tel-national" inputmode="numeric" maxlength="16" placeholder="(48) 99999-9999">
+        <span class="erro-msg" role="alert">Informe um WhatsApp com DDD.</span>
+      </div>
+
+      <div class="isca" aria-hidden="true">
+        <label for="f-empresa-site">Site da empresa</label>
+        <input type="text" id="f-empresa-site" name="empresa_site" tabindex="-1" autocomplete="off">
       </div>
 
       <div class="campo" data-campo="cidade">
@@ -635,7 +647,7 @@
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91A9.84 9.84 0 0 0 12.04 2Zm5.8 14.02c-.24.68-1.43 1.3-1.97 1.35-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.8-4.18-4.94-4.37-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.3-.12.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.63-.07.17-.2.72-.84.91-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.94.29.14.48.21.55.33.07.12.07.7-.17 1.38Z"/></svg>
         <span>Falar com um especialista</span>
       </button>
-      <p class="miudo">O WhatsApp da Marine abre com suas respostas preenchidas. Atendimento em horário comercial.</p>
+      <p class="miudo">O WhatsApp da Marine abre com suas respostas preenchidas. Seus dados vão para a equipe da Marine Telematics, que os usa só para responder ao seu pedido. Atendimento em horário comercial.</p>
     </form>
   </div>
 </section>
@@ -683,7 +695,7 @@
   var CONFIG = {
     whatsapp: "5548936180258",          // WhatsApp comercial da Marine (o mesmo do site)
     formId: "materia-frota-de-trabalho",
-    webhook: ""                          // opcional: endpoint que recebe o lead (n8n → FaleUp). Vazio = não envia
+    webhook: "https://n8n.studioartemis.co/webhook/marine-materia-lead"   // n8n "Marine | LP Matéria | FaleUp" → funil SDR
   };
 
   // Redirecionamento isolado numa função para poder ser observado nos testes
@@ -741,12 +753,31 @@
     return (el.value || "").trim();
   }
 
+  function foneValido(v){
+    var d = String(v || "").replace(/\D/g, "");
+    if (d.length === 12 || d.length === 13) d = d.indexOf("55") === 0 ? d.slice(2) : "";
+    return (d.length === 10 || d.length === 11) && d[0] !== "0";
+  }
+
+  // máscara leve: (48) 99999-9999
+  var campoFone = document.getElementById("f-whatsapp");
+  campoFone.addEventListener("input", function(){
+    var d = campoFone.value.replace(/\D/g, "").slice(0, 11);
+    var f = d;
+    if (d.length > 2) f = "(" + d.slice(0, 2) + ") " + d.slice(2);
+    if (d.length > 6) f = "(" + d.slice(0, 2) + ") " + d.slice(2, d.length - 4) + "-" + d.slice(-4);
+    campoFone.value = f;
+  });
+
   function valida(){
     var ok = true, primeiro = null;
     form.querySelectorAll(".campo").forEach(function(c){
       var nome = c.getAttribute("data-campo");
       var v = valor(nome);
-      var invalido = nome === "nome" || nome === "cidade" ? v.length < 2 : !v;
+      var invalido;
+      if (nome === "nome" || nome === "cidade") invalido = v.length < 2;
+      else if (nome === "whatsapp") invalido = !foneValido(v);
+      else invalido = !v;
       c.classList.toggle("invalido", invalido);
       if (invalido){ ok = false; if (!primeiro) primeiro = c; }
     });
@@ -769,6 +800,7 @@
 
     var payload = {
       nome: valor("nome"),
+      whatsapp: valor("whatsapp"),
       cidade: valor("cidade"),
       embarcacao: valor("embarcacao"),
       motores: valor("motores"),
@@ -779,7 +811,11 @@
       utm_source: utm("utm_source"),
       utm_medium: utm("utm_medium"),
       utm_campaign: utm("utm_campaign"),
-      utm_content: utm("utm_content")
+      utm_content: utm("utm_content"),
+      url: location.href.split("#")[0],
+      t: Math.round(performance.now()),
+      empresa_site: (form.elements.empresa_site && form.elements.empresa_site.value) || "",
+      teste: params.get("teste") === "artemis"      // ?teste=artemis manda pro funil de teste
     };
 
     var linhas = [
@@ -825,6 +861,7 @@
       utm_source: payload.utm_source,
       utm_medium: payload.utm_medium,
       utm_campaign: payload.utm_campaign,
+      teste: payload.teste,
       eventCallback: go,                             // redireciona assim que as tags dispararem
       eventTimeout: 1500                             // ...ou em 1,5s, se o GTM travar
     });
